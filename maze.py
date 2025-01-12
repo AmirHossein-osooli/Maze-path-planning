@@ -3,7 +3,7 @@ import numpy as np
 from a_star import AStarPlanner
 
 import matplotlib
-matplotlib.use('TkAgg')  # Set the backend to TkAgg
+matplotlib.use('TkAgg')  # Set the backend to TkAgg (you may need to comment this line)
 
 import matplotlib.pyplot as plt
 
@@ -27,8 +27,8 @@ def image_to_obstacles(image_path, grid_resolution):
     # Convert obstacle indices to x, y coordinates
     ox, oy = [], []
     for coord in obstacle_indices:
-        ox.append(coord[1])  # x-coordinate
-        oy.append(-coord[0])  # y-coordinate
+        ox.append(coord[1])   # x-coordinate
+        oy.append(-coord[0])  # y-coordinate (Using negative to correct the plot) 
 
     return ox, oy
 
