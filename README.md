@@ -1,4 +1,4 @@
-# Maze-path-planning
+# Maze Path-Planning
 
 Run maze.py to calculate the path between start and end. Based on the size of your map it may be a bit slow.
 
