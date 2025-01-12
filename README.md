@@ -1,5 +1,5 @@
 # Maze Path-Planning
 
-Run maze.py to calculate the path between start and end. Based on the size of your map it may be a bit slow.
+This is the maze path-planning code, for Runing this code, run the maze.py file and the program will start to calculate the path between start and end. Based on the size of the map it could be a bit slow.
 
-We use a_star.py from https://github.com/AtsushiSakai/PythonRobotics.git
+We used a_star.py code from https://github.com/AtsushiSakai/PythonRobotics.git and made some change for work with our map.
