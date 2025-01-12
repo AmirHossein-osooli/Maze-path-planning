@@ -3,14 +3,14 @@ import numpy as np
 from a_star import AStarPlanner
 
 import matplotlib
-matplotlib.use('TkAgg')  # Set the backend to TkAgg (you may need to comment this line)
+# matplotlib.use('TkAgg')  # Set the backend to TkAgg (you may need to comment this line)
 
 import matplotlib.pyplot as plt
 
 from matplotlib.animation import FuncAnimation, PillowWriter  # For animation
 
 show_animation = True
-
+save_gif = False
 def image_to_obstacles(image_path, grid_resolution):
     # Load the maze image
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
@@ -60,16 +60,17 @@ def main():
     # Function to update animation frame
     def update(frame):
         if frame < len(rx):
-            path_line.set_data(rx[:frame + 1], ry[:frame + 1])
+            path_line.set_data(rx[-(frame):], ry[-(frame):])
         return path_line,
 
-    # Create animation
-    ani = FuncAnimation(fig, update, frames=len(rx), interval=100, blit=True)
+        # Create animation
+    if save_gif:
+        ani = FuncAnimation(fig, update, frames=len(rx), interval=100, blit=True)
 
-    # Save animation as GIF
-    gif_path = "a_star_animation.gif"
-    ani.save(gif_path, writer=PillowWriter(fps=10))
-    print(f"Animation saved as {gif_path}")
+        # Save animation as GIF
+        gif_path = "a_star_animation.gif"
+        ani.save(gif_path, writer=PillowWriter(fps=10))
+        print(f"Animation saved as {gif_path}")
 
     # Show animation
     if show_animation:  # pragma: no cover
