@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation, PillowWriter  # For animation
 
 show_animation = True
-save_gif = False
+save_gif = True
 def image_to_obstacles(image_path, grid_resolution):
     # Load the maze image
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
@@ -64,9 +64,9 @@ def main():
         return path_line,
 
         # Create animation
-    if save_gif:
-        ani = FuncAnimation(fig, update, frames=len(rx), interval=100, blit=True)
 
+    ani = FuncAnimation(fig, update, frames=len(rx), interval=100, blit=True)
+    if save_gif:
         # Save animation as GIF
         gif_path = "a_star_animation.gif"
         ani.save(gif_path, writer=PillowWriter(fps=10))
