@@ -4,4 +4,5 @@ We utilized the a_star.py code from https://github.com/AtsushiSakai/PythonRoboti
 
 We also used the Animated scatter saved as GIF code from https://matplotlib.org/stable/gallery/animation/simple_scatter.html due to save the gif from the result animation.
 
+
 ![a_star_animation](https://github.com/user-attachments/assets/e60c3c31-6204-4fdf-86df-5a99b7d39c1d)
