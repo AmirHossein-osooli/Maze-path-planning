@@ -1,5 +1,7 @@
-# Maze Path-Planning
+This is the maze path-planning program. To run it, simply execute the maze.py file, and the program will calculate the path between the start and end goal point. Please note that the calculation speed may vary depending on the map size.
 
-This is the maze path-planning code, for Runing this code, run the maze.py file and the program will start to calculate the path between start and end. Based on the size of the map it could be a bit slow.
+We utilized the a_star.py code from https://github.com/AtsushiSakai/PythonRobotics.git and made modifications to ensure compatibility with our custom map.
 
-We used a_star.py code from https://github.com/AtsushiSakai/PythonRobotics.git and made some change for work with our map.
+wWe also used the Animated scatter saved as GIF code from https://matplotlib.org/stable/gallery/animation/simple_scatter.html due to save the gif from the result animation.
+
+![a_star_animation](https://github.com/user-attachments/assets/e60c3c31-6204-4fdf-86df-5a99b7d39c1d)
