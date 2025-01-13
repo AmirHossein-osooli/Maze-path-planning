@@ -1,4 +1,4 @@
-Maze-path-planning
+# Maze-path-planning
 
 This is the maze path-planning program. To run it, simply execute the maze.py file, and the program will calculate the path between the start and end goal point. Please note that the calculation speed may vary depending on the map size.
 
